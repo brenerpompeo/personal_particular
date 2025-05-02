@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Plano de Fitness - 3 Fases</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <header class="mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.2929 9.70711C20.6834 9.31658 20.6834 8.68342 20.2929 8.29289L13.2929 1.29289C12.9024 0.902369 12.2692 0.902369 11.8787 1.29289L4.87868 8.29289C4.48816 8.68342 4.48816 9.31658 4.87868 9.70711L11.8787 16.7071C12.2692 17.0976 12.9024 17.0976 13.2929 16.7071L20.2929 9.70711Z" fill="currentColor"/>
+                        <path d="M11.8787 19.7071L4.87868 12.7071C4.48816 12.3166 3.85499 12.3166 3.46447 12.7071C3.07394 13.0976 3.07394 13.7308 3.46447 14.1213L10.4645 21.1213C11.2455 21.9024 12.5118 21.9024 13.2929 21.1213L20.2929 14.1213C20.6834 13.7308 20.6834 13.0976 20.2929 12.7071C19.9024 12.3166 19.2692 12.3166 18.8787 12.7071L11.8787 19.7071Z" fill="currentColor" fill-opacity="0.5"/>
+                    </svg>
+                    <h1 class="text-2xl font-bold">Plano de Fitness</h1>
+                </div>
+                <div id="phase-indicator" class="bg-black text-white text-xs font-medium rounded-full px-3 py-1">
+                    Fase 1
+                </div>
+            </div>
+            <div class="h-1 w-full bg-gray-200 rounded-full mb-4">
+                <div id="progress-bar-fill" class="h-1 bg-black rounded-full transition-all duration-500 ease-out" style="width: 33%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-gray-500">
+                <span>Fase 1 (Sem 1-4)</span>
+                <span>Fase 2 (Sem 5-8)</span>
+                <span>Fase 3 (Sem 9-12)</span>
+            </div>
+        </header>
+
+        <!-- Abas de Navegação -->
+        <nav class="mb-8 flex border-b border-gray-200">
+            <button data-phase="1" class="phase-tab flex-1 py-3 px-1 text-center text-sm font-medium border-b-2 border-black text-black focus:outline-none">
+                Fase 1
+            </button>
+            <button data-phase="2" class="phase-tab flex-1 py-3 px-1 text-center text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none">
+                Fase 2
+            </button>
+            <button data-phase="3" class="phase-tab flex-1 py-3 px-1 text-center text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none">
+                Fase 3
+            </button>
+        </nav>
+
+        <main>
+            <!-- Conteúdo Fase 1 -->
+            <div id="phase-1-content" class="phase-content">
+                <section class="mb-10 bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-semibold mb-6">Plano de Treino <span class="text-gray-500">(Fase 1: Fundação)</span></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Lista A - Peito, Ombro e Tríceps -->
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">A</div><h3 class="font-semibold">Peito, Ombro e Tríceps</h3></div>
+                            <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Supino com halteres</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Desenvolvimento sentado com halteres</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Crucifixo na máquina</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Tríceps pulley</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Flexões de braço</h4><p class="text-sm text-gray-500">3 séries até a falha</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Elevação lateral com halteres</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Face pull</h4><p class="text-sm text-gray-500">3 séries de 15 repetições</p></div>
+                            </div>
+                        </div>
+                        <!-- Lista B - Costas, Pernas e Bíceps -->
+                        <div class="space-y-6">
+                             <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">B</div><h3 class="font-semibold">Costas, Pernas e Bíceps</h3></div>
+                             <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Agachamento livre</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Leg press 45°</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Cadeira extensora</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Mesa flexora</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Levantamento terra romeno</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Puxada frontal no pulley</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Remada sentada</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Remada curvada</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca direta</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca martelo</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Panturrilha</h4><p class="text-sm text-gray-500">4 séries de 15-20 repetições</p></div>
+                             </div>
+                        </div>
+                        <!-- Lista C - Core e Mobilidade -->
+                        <div class="space-y-6 md:col-span-2">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">C</div><h3 class="font-semibold">Core e Mobilidade (2-3x por semana)</h3></div>
+                            <div class="exercise-list space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Prancha frontal</h4><p class="text-sm text-gray-500">3 séries de 30-60 segundos</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Agachamento goblet</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Conteúdo Fase 2 -->
+            <div id="phase-2-content" class="phase-content hidden">
+                 <section class="mb-10 bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-semibold mb-6">Plano de Treino <span class="text-gray-500">(Fase 2: Intensificação)</span></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Lista A - Peito, Ombro e Tríceps -->
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">A</div><h3 class="font-semibold">Peito, Ombro e Tríceps</h3></div>
+                            <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Supino inclinado com halteres</h4><p class="text-sm text-gray-500">4 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Desenvolvimento militar em pé com barra</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Crucifixo inclinado com halteres</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Paralelas (ou máquina assistida/negativas)</h4><p class="text-sm text-gray-500">3 séries de 8-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Tríceps testa com barra W</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Elevação lateral na polia baixa</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições (cada lado)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Elevação frontal alternada com halteres</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições (cada lado)</p></div>
+                            </div>
+                        </div>
+                        <!-- Lista B - Costas, Pernas e Bíceps -->
+                        <div class="space-y-6">
+                             <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">B</div><h3 class="font-semibold">Costas, Pernas e Bíceps</h3></div>
+                             <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Agachamento búlgaro</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições (cada perna)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Levantamento terra (convencional ou sumô)</h4><p class="text-sm text-gray-500">3 séries de 6-8 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Cadeira flexora</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Extensora unilateral</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições (cada perna)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Barra fixa (ou puxador frente pegada aberta)</h4><p class="text-sm text-gray-500">4 séries de 6-10 repetições (ou até a falha)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Remada cavalinho</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Pull down com corda</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca inclinada com halteres</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca concentrada</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições (cada braço)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Panturrilha no leg press</h4><p class="text-sm text-gray-500">4 séries de 15-20 repetições</p></div>
+                             </div>
+                        </div>
+                        <!-- Lista C - Core e Mobilidade -->
+                        <div class="space-y-6 md:col-span-2">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">C</div><h3 class="font-semibold">Core e Mobilidade (2-3x por semana)</h3></div>
+                            <div class="exercise-list space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Prancha lateral</h4><p class="text-sm text-gray-500">3 séries de 30-45 segundos (cada lado)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Abdominal remador</h4><p class="text-sm text-gray-500">3 séries de 15-20 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Mobilidade torácica (gato-camelo)</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+            </div>
+
+            <!-- Conteúdo Fase 3 -->
+            <div id="phase-3-content" class="phase-content hidden">
+                 <section class="mb-10 bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-semibold mb-6">Plano de Treino <span class="text-gray-500">(Fase 3: Refinamento e Pico)</span></h2>
+                     <p class="text-sm text-gray-600 mb-6">Foco em técnicas avançadas e densidade muscular. Considere usar supersets ou dropsets em alguns exercícios isoladores.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Lista A - Peito, Ombro e Tríceps -->
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">A</div><h3 class="font-semibold">Peito, Ombro e Tríceps</h3></div>
+                            <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Supino reto com barra</h4><p class="text-sm text-gray-500">4 séries de 6-8 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Desenvolvimento Arnold</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Cross over polia alta</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                 <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Supino fechado</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Tríceps francês unilateral com halter</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições (cada braço)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Elevação lateral curvado (posterior ombro)</h4><p class="text-sm text-gray-500">4 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Encolhimento com halteres</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                            </div>
+                        </div>
+                        <!-- Lista B - Costas, Pernas e Bíceps -->
+                        <div class="space-y-6">
+                             <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">B</div><h3 class="font-semibold">Costas, Pernas e Bíceps</h3></div>
+                             <div class="exercise-list space-y-4">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Agachamento frontal</h4><p class="text-sm text-gray-500">4 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Stiff com barra</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Afundo com halteres (passada)</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições (cada perna)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Mesa flexora unilateral</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições (cada perna)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Remada serrote</h4><p class="text-sm text-gray-500">4 séries de 8-10 repetições (cada braço)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Puxada frontal pegada supinada</h4><p class="text-sm text-gray-500">3 séries de 10-12 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Hiperextensão lombar (banco romano)</h4><p class="text-sm text-gray-500">3 séries de 15-20 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca Scott com barra W</h4><p class="text-sm text-gray-500">3 séries de 8-10 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Rosca martelo corda na polia</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Panturrilha sentado</h4><p class="text-sm text-gray-500">4 séries de 20-25 repetições</p></div>
+                             </div>
+                        </div>
+                        <!-- Lista C - Core e Mobilidade -->
+                        <div class="space-y-6 md:col-span-2">
+                            <div class="flex items-center space-x-3"><div class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">C</div><h3 class="font-semibold">Core e Mobilidade (2-3x por semana)</h3></div>
+                            <div class="exercise-list space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0">
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Abdominal na polia alta (ajoelhado)</h4><p class="text-sm text-gray-500">3 séries de 12-15 repetições</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Levantamento terra turco (leve)</h4><p class="text-sm text-gray-500">3 séries de 5-8 repetições (cada lado)</p></div>
+                                <div class="exercise-item p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all"><h4 class="font-medium">Mobilidade de quadril (90/90)</h4><p class="text-sm text-gray-500">3 séries de 8-10 transições (cada lado)</p></div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+            </div>
+
+            <!-- Orientações Gerais -->
+            <section class="mb-8 bg-white rounded-xl shadow-sm p-6">
+                <h2 class="text-xl font-semibold mb-4">Orientações Gerais (Todas as Fases)</h2>
+                <div class="space-y-4 text-sm leading-relaxed">
+                    <p>• Realize aquecimento adequado antes de cada treino (5-10 minutos de cardio leve + mobilidade articular e ativações específicas para o treino do dia).</p>
+                    <p>• **Descanso entre séries:** Fase 1: 60-90s; Fase 2: 60-75s (compostos), 45-60s (isoladores); Fase 3: 45-60s (pode usar descanso ativo leve ou técnicas como rest-pause).</p>
+                    <p>• Alterne entre o treino A e B em dias diferentes, garantindo pelo menos 48h de descanso para os mesmos grupos musculares (Ex: Seg-A, Ter-Descanso, Qua-B, Qui-Descanso, Sex-A, Sab/Dom-Descanso).</p>
+                    <p>• Integre o treino C (Core/Mobilidade) 2-3x por semana, preferencialmente após os treinos A/B ou em dias de descanso ativo.</p>
+                    <p>• **Progressão de Carga:** Foque em aumentar a carga ou as repetições a cada semana (sobrecarga progressiva). Use um peso que o desafie na faixa de repetições prescrita, mantendo a boa forma.</p>
+                    <p>• **Técnica > Carga:** Priorize sempre a execução correta. Use os vídeos como guia e, se possível, filme-se ou peça a um profissional para avaliar sua forma.</p>
+                    <p>• Hidratação e Nutrição: Mantenha-se bem hidratado e siga um plano nutricional adequado aos seus objetivos (superávit calórico para ganho de massa, manutenção ou déficit leve para definição, sempre com proteína suficiente).</p>
+                    <p>• Sono e Recuperação: Durma de 7 a 9 horas por noite. O descanso é crucial para a recuperação e crescimento muscular.</p>
+                     <p>• Ouça seu Corpo: Ajuste o volume ou intensidade se sentir dor excessiva ou fadiga extrema. O descanso programado (deload) a cada 8-12 semanas pode ser benéfico.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center text-gray-500 text-xs mt-8 pt-4 border-t border-gray-200">
+            <p>Built with <a href="https://flowith.net" target="_blank" class="text-black hover:underline">Flowith Oracle</a>. Plano evoluído.</p>
+        </footer>
+    </div>
+
+    <!-- Modal de vídeo (Estrutura Inalterada) -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl max-w-3xl w-full mx-4 overflow-hidden shadow-lg modal-content">
+            <div class="p-4 flex justify-between items-center border-b">
+                <h3 class="text-lg font-semibold" id="modal-title">Título do Exercício</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="aspect-video w-full">
+                <iframe id="youtube-frame" class="w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-4 bg-gray-50 text-sm">
+                <p>Assistir vídeos demonstrativos pode ajudar na execução correta dos exercícios. Sempre consulte um profissional de educação física para orientações personalizadas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Prevenir zoom com a roda do mouse + Ctrl
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey;
+            if(isPinching) e.preventDefault();
+        }, { passive: false });
+    </script>
+</body>
+</html>
